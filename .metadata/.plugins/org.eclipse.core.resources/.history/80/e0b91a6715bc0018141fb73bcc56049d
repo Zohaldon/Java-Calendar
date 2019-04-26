@@ -1,0 +1,87 @@
+import java.util.Scanner;
+
+public class PrintCalendar
+{
+
+	public static void main(String[] args)
+	{
+		Scanner readInput = new Scanner(System.in);
+		
+		//Getting the input from the user
+		System.out.print("Enter the number of year (e.g., 2018): ");
+	    int year = readInput.nextInt();
+	    
+	    System.out.print("Enter the number of month in between 1 and 12: ");
+	    int month = readInput.nextInt();
+	    
+	    printMonth(year,month);
+		System.out.println("–––––––––––––––––––––––––––––");
+	}
+	
+	/*METHOD TO PRINT THE CALENDAR*/
+	static void printMonth(int year, int month)
+	{
+		printMonthTitle(year, month); //to print the Title e.g., January 2018
+		printMonthBody(year, month); //to print the calendar
+	}
+	
+	/*METHOD 1/2 TO PRINT THE TITLE OF THE CALENDAR*/
+	static void printMonthTitle(int year, int month)
+	{
+	    System.out.println( "         " + getmonthString(month) + "#" + year); 
+		System.out.println("–––––––––––––––––––––––––––––");
+		System.out.println(" Sun Mon Tue Wed Thu Fri Sat");
+	}
+	
+	/*METHOD TO GET THE NAME OF THE MONTH BASED UPON THE USER INPUT*/
+	static String getmonthString(int month)
+	{
+		String monthString = null;
+		switch (month)
+		{
+			case 1:
+				monthString = "January";
+				break;
+			case 2: 
+				monthString = "February";
+				break;
+			case 3:
+				monthString = "March"; 
+				break;
+			case 4: 
+				monthString = "April"; 
+				break;
+			case 5: 
+				monthString = "May"; 
+				break;
+			case 6: 
+				monthString = "June"; 
+				break;
+			case 7: 
+				monthString = "July"; 
+				break;
+			case 8: 
+				monthString = "August"; 
+				break;
+			case 9: 
+				monthString = "September"; 
+				break;
+			case 10: 
+				monthString = "October"; 
+				break;
+			case 11: 
+				monthString = "November"; 
+				break;
+			case 12: 
+				monthString = "December";
+				break;
+		}
+		return monthString;
+	}
+	
+	/*METHOD 2/2 TO FILL THE CALENDAR WITH THE DATES*/
+	static void printMonthBody(int year, int month) 
+	{
+		
+	}
+}

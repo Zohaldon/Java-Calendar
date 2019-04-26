@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class PrintCalendar
+{
+
+	public static void main(String[] args)
+	{
+		Scanner readInput = new Scanner(System.in);
+		
+		//Getting the input from the user
+		System.out.print("Enter the number of year (e.g., 2018): ");
+	    int year = readInput.nextInt();
+	    
+	    System.out.print("Enter the number of month in between 1 and 12: ");
+	    int month = readInput.nextInt();
+	    
+	    printMonth(year,month);
+		System.out.println("–––––––––––––––––––––––––––––");
+	}
+	
+	/*METHOD TO PRINT THE CALENDAR*/
+	static void printMonth(int year, int month)
+	{
+		printMonthTitle(year, month); //to print the Title e.g., January 2018
+		printMonthBody(year, month); //to print the calendar
+	}
+	static void printMonthTitle(int year, int month)
+	{
+	    System.out.println( "         " + getMonthName(month) + " " + year);
+		System.out.println("–––––––––––––––––––––––––––––");
+		System.out.println(" Sun Mon Tue Wed Thu Fri Sat");
+	}
+}

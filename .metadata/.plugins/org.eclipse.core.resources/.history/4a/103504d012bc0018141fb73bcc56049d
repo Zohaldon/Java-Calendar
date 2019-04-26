@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class PrintCalendar
+{
+
+	public static void main(String[] args)
+	{
+		Scanner readInput = new Scanner(System.in);
+		
+		//Getting the input from the user
+		System.out.print("Enter the number of year (e.g., 2018): ");
+	    int year = readInput.nextInt();
+	    
+	    System.out.print("Enter the number of month in between 1 and 12: ");
+	    int month = readInput.nextInt();
+	    
+	    printMonth
+	}
+}
